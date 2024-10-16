@@ -1,0 +1,58 @@
+Anomalies:
+- Dense subgraphs
+- Some edges
+Preferably both with constant update time
+Online streaming version
+
+fancy E is the set of edges
+each edge e is a tuple (u, v, w, t) - vertex, vertex, weight, timestamp
+vertex set fancy V is not known a priori
+The graph G can be non-simple, i.e. have multi-edges
+Timestamps can be reflexive (t2=t1), due to a discrete time tick scenario
+
+New Count-Min Sketch (CMS):
+- Each hashing function works in 2 dimensions and represents a plane (cut into pieces, uhm...cells)
+- To obtain an estimate of a cell presence, take the minimum of that cell across all hashing functions
+
+Density of a submatrix there is defined as:
+(sum over the elements in the submatrix) / sqrt(size of the submatrix)....why the square root?
+
+EDGE ANOMALIES:
+AnoEdge-G for the global problem
+AnoEdge-L for the local problem
+
+AnoEdge-G:
+- has the decay factor
+- for each incoming edge:
+-    (greedily by joining rows/columns of the CMS) create a submatrix around the h(edge)
+-    find the density of the submatrix above. Report this as the anomaly score
+
+AnoEdge-L:
+- Likelihood of an edge (u, v) w.r.t. some submatrix M defined as:
+- sum(elements in row and column of M that (u, v) is in) / number of those elements
+- Initialize a 1x1 matrix M with random element
+- for each incoming edge:
+-    update the CMS
+-    If adding its row/column (a part of???) to M increases its density:
+-        do it
+-        there also is a part about deletion of a row/column, but honestly the paper is super bad about it
+
+GRAPH ANOMALIES - try to find a dense submatrix in the CMS of the entire graph:
+AnoGraph for?
+AnoGraph-K for?
+
+AnoGraph:
+Start with a matrix equivalent to the CMS
+Greedily delete the row/column of the smallest sum until nothing is left
+At each step, compute the density. Return the maximal density obtained in the process
+It is a 2-approximation in finding the maximum density!
+
+AnoGraph-K:
+same story, just finds the densest submatrix in a different fashion - just like AnoEdge-L does
+
+Then, we have a large section about how well those methods perform on some datasets
+The alpha (decaying) parameter better kept around 0.8-0.9 for the DARPA dataset
+Future work:
+- Rectangular CMSes
+- Allow tensor input
+- Incorporate parallel computing
