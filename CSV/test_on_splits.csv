@@ -26,7 +26,6 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,ISCX,2563,5348,No sketch,Common Neighbours,0.187959384,14.2555
 01:09,ISCX,2563,5348,No sketch,Jaccard Coefficient,0.83951522,33.5095
 01:09,ISCX,2563,5348,No sketch,Preferential Attachment,0.12911717,2.4183
-10:00,ISCX,-1,-1,MIDAS,No LP,0.409138653,-1
 09:01,ISCX,30458,44019,MIDAS,Common Neighbours,0.712,11.5145
 09:01,ISCX,30458,44019,MIDAS,Jaccard Coefficient,0.377,26.0081
 09:01,ISCX,30458,44019,MIDAS,Preferential Attachment,0.8288,0.3472
@@ -63,7 +62,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,ISCX,2563,5348,MIDAS,Jaccard Coefficient,0.8369,32.6208
 01:09,ISCX,2563,5348,MIDAS,Preferential Attachment,0.1942,2.4612
 01:09,ISCX,2563,5348,MIDAS,No LP,0.402345986,1.1801
-10:00,ISCX,-1,-1,MIDAS-R,No LP,0.697041869,-1
+00:10,ISCX,-1,-1,MIDAS,No LP,0.409138653,-1
 09:01,ISCX,30458,44019,MIDAS-R,Common Neighbours,0.789,10.6524
 09:01,ISCX,30458,44019,MIDAS-R,Jaccard Coefficient,0.4393,23.8665
 09:01,ISCX,30458,44019,MIDAS-R,Preferential Attachment,0.8683,0.3137
@@ -100,7 +99,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,ISCX,2563,5348,MIDAS-R,Jaccard Coefficient,0.868159271,26.8461
 01:09,ISCX,2563,5348,MIDAS-R,Preferential Attachment,0.204893728,6.2654
 01:09,ISCX,2563,5348,MIDAS-R,No LP,0.802547955,1.0081
-10:00,ISCX,-1,-1,Custom,No LP,0.570977033,-1
+00:10,ISCX,-1,-1,MIDAS-R,No LP,0.697041869,-1
 09:01,ISCX,30458,44019,Custom,Common Neighbours,0.763610636,9.6654
 09:01,ISCX,30458,44019,Custom,Jaccard Coefficient,0.373053767,21.1697
 09:01,ISCX,30458,44019,Custom,Preferential Attachment,0.878152676,0.3124
@@ -137,6 +136,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,ISCX,2563,5348,Custom,Jaccard Coefficient,0.872484872,30.8807
 01:09,ISCX,2563,5348,Custom,Preferential Attachment,0.205647507,2.75
 01:09,ISCX,2563,5348,Custom,No LP,0.579324009,0.6094
+00:10,ISCX,-1,-1,Custom,No LP,0.570977033,-1
 09:01,DARPA,11106,36006,No sketch,Common Neighbours,0.527865133,12.4047
 09:01,DARPA,11106,36006,No sketch,Jaccard Coefficient,0.501,-1
 09:01,DARPA,11106,36006,No sketch,Preferential Attachment,0.884690284,1.2286
@@ -164,7 +164,6 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,DARPA,3772,12608,No sketch,Common Neighbours,0.522757061,24.5619
 01:09,DARPA,3772,12608,No sketch,Jaccard Coefficient,0.5136,-1
 01:09,DARPA,3772,12608,No sketch,Preferential Attachment,0.852312822,11.0691
-10:00,DARPA,-1,-1,MIDAS,No LP,0.894528194,-1
 09:01,DARPA,11106,36006,MIDAS,Common Neighbours,0.8328,10.9053
 09:01,DARPA,11106,36006,MIDAS,Jaccard Coefficient,0.7938,31.8388
 09:01,DARPA,11106,36006,MIDAS,Preferential Attachment,0.9108,1.3356
@@ -201,7 +200,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,DARPA,3772,12608,MIDAS,Jaccard Coefficient,0.8144,62.0826
 01:09,DARPA,3772,12608,MIDAS,Preferential Attachment,0.9216,6.3449
 01:09,DARPA,3772,12608,MIDAS,No LP,0.909419448,3.6547
-10:00,DARPA,-1,-1,MIDAS-R,No LP,0.7822,-1
+00:10,DARPA,-1,-1,MIDAS,No LP,0.894528194,-1
 09:01,DARPA,11106,36006,MIDAS-R,Common Neighbours,0.8516,11.1173
 09:01,DARPA,11106,36006,MIDAS-R,Jaccard Coefficient,0.8153,25.5172
 09:01,DARPA,11106,36006,MIDAS-R,Preferential Attachment,0.9331,1.1196
@@ -238,7 +237,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,DARPA,3772,12608,MIDAS-R,Jaccard Coefficient,0.822,62.4673
 01:09,DARPA,3772,12608,MIDAS-R,Preferential Attachment,0.9315,6.9795
 01:09,DARPA,3772,12608,MIDAS-R,No LP,0.949778179,3.0001
-10:00,DARPA,-1,-1,Custom,No LP,0.941520091,-1
+00:10,DARPA,-1,-1,MIDAS-R,No LP,0.7822,-1
 09:01,DARPA,11106,36006,Custom,Common Neighbours,0.829355823,12.2656
 09:01,DARPA,11106,36006,Custom,Jaccard Coefficient,0.801071051,28.6561
 09:01,DARPA,11106,36006,Custom,Preferential Attachment,0.925200991,1.5
@@ -275,34 +274,34 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,DARPA,3772,12608,Custom,Jaccard Coefficient,0.937282915,53.1122
 01:09,DARPA,3772,12608,Custom,Preferential Attachment,0.976439273,6.2337
 01:09,DARPA,3772,12608,Custom,No LP,0.941092189,2.2029
-09:01,NB15,50,171,No sketch,Common Neighbours,0.5002804697570058,0.9365
-09:01,NB15,50,171,No sketch,Jaccard Coefficient,0.43783794350364996,1.8725
+00:10,DARPA,-1,-1,Custom,No LP,0.941520091,-1
+09:01,NB15,50,171,No sketch,Common Neighbours,0.50028047,0.9365
+09:01,NB15,50,171,No sketch,Jaccard Coefficient,0.437837944,1.8725
 09:01,NB15,50,171,No sketch,Preferential Attachment,0.948881068,0.6059
-08:02,NB15,50,171,No sketch,Common Neighbours,0.5002535587719402,1.7626
-08:02,NB15,50,171,No sketch,Jaccard Coefficient,0.48405397056464394,3.1073
+08:02,NB15,50,171,No sketch,Common Neighbours,0.500253559,1.7626
+08:02,NB15,50,171,No sketch,Jaccard Coefficient,0.484053971,3.1073
 08:02,NB15,50,171,No sketch,Preferential Attachment,0.903234165,1.1606
-07:03,NB15,50,170,No sketch,Common Neighbours,0.5002440188849397,2.312
-07:03,NB15,50,170,No sketch,Jaccard Coefficient,0.4500765260204262,4.0772
+07:03,NB15,50,170,No sketch,Common Neighbours,0.500244019,2.312
+07:03,NB15,50,170,No sketch,Jaccard Coefficient,0.450076526,4.0772
 07:03,NB15,50,170,No sketch,Preferential Attachment,0.912752177,1.8968
-06:04,NB15,50,169,No sketch,Common Neighbours,0.5002391388218261,3.0992
-06:04,NB15,50,169,No sketch,Jaccard Coefficient,0.5378127435530354,5.4831
+06:04,NB15,50,169,No sketch,Common Neighbours,0.500239139,3.0992
+06:04,NB15,50,169,No sketch,Jaccard Coefficient,0.537812744,5.4831
 06:04,NB15,50,169,No sketch,Preferential Attachment,0.861975346,2.559
-05:05,NB15,50,166,No sketch,Common Neighbours,0.5002333999735984,3.7804
-05:05,NB15,50,166,No sketch,Jaccard Coefficient,0.6219543071314358,7.0296
+05:05,NB15,50,166,No sketch,Common Neighbours,0.5002334,3.7804
+05:05,NB15,50,166,No sketch,Jaccard Coefficient,0.621954307,7.0296
 05:05,NB15,50,166,No sketch,Preferential Attachment,0.785758263,3.0951
-04:06,NB15,46,157,No sketch,Common Neighbours,0.5002631177800017,4.7176
-04:06,NB15,46,157,No sketch,Jaccard Coefficient,0.5458189766395906,8.0138
+04:06,NB15,46,157,No sketch,Common Neighbours,0.500263118,4.7176
+04:06,NB15,46,157,No sketch,Jaccard Coefficient,0.545818977,8.0138
 04:06,NB15,46,157,No sketch,Preferential Attachment,0.848385567,3.2183
-03:07,NB15,46,157,No sketch,Common Neighbours,0.5003222062505743,5.3269
+03:07,NB15,46,157,No sketch,Common Neighbours,0.500322206,5.3269
 03:07,NB15,46,157,No sketch,Jaccard Coefficient,0.548790179,9.4443
 03:07,NB15,46,157,No sketch,Preferential Attachment,0.868892459,3.8073
-02:08,NB15,46,157,No sketch,Common Neighbours,0.5003679006212166,6.1236
-02:08,NB15,46,157,No sketch,Jaccard Coefficient,0.5510115681697279,10.7787
+02:08,NB15,46,157,No sketch,Common Neighbours,0.500367901,6.1236
+02:08,NB15,46,157,No sketch,Jaccard Coefficient,0.551011568,10.7787
 02:08,NB15,46,157,No sketch,Preferential Attachment,0.884206302,4.1927
-01:09,NB15,44,155,No sketch,Common Neighbours,0.5003910438625269,6.8578
-01:09,NB15,44,155,No sketch,Jaccard Coefficient,0.5527466519416316,12.175
+01:09,NB15,44,155,No sketch,Common Neighbours,0.500391044,6.8578
+01:09,NB15,44,155,No sketch,Jaccard Coefficient,0.552746652,12.175
 01:09,NB15,44,155,No sketch,Preferential Attachment,0.896261786,5.4668
-10:00,NB15,-1,-1,MIDAS,No LP,0.885549556,-1
 09:01,NB15,50,171,MIDAS,Common Neighbours,0.6177,1.0152
 09:01,NB15,50,171,MIDAS,Jaccard Coefficient,0.5988,1.7107
 09:01,NB15,50,171,MIDAS,Preferential Attachment,0.6972,0.6881
@@ -339,7 +338,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,NB15,44,155,MIDAS,Jaccard Coefficient,0.7301,14.8688
 01:09,NB15,44,155,MIDAS,Preferential Attachment,0.7779,5.3392
 01:09,NB15,44,155,MIDAS,No LP,0.883557229,2.801
-10:00,NB15,-1,-1,MIDAS-R,No LP,0.8494,-1
+00:10,NB15,-1,-1,MIDAS,No LP,0.885549556,-1
 09:01,NB15,50,171,MIDAS-R,Common Neighbours,0.6277,0.8964
 09:01,NB15,50,171,MIDAS-R,Jaccard Coefficient,0.6125,1.4584
 09:01,NB15,50,171,MIDAS-R,Preferential Attachment,0.676,0.5828
@@ -376,43 +375,44 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,NB15,44,155,MIDAS-R,Jaccard Coefficient,0.7319,13.5223
 01:09,NB15,44,155,MIDAS-R,Preferential Attachment,0.7668,5.3478
 01:09,NB15,44,155,MIDAS-R,No LP,0.902415935,1.6597
-10:00,NB15,-1,-1,Custom,No LP,0.762416939,-1
+00:10,NB15,-1,-1,MIDAS-R,No LP,0.8494,-1
 09:01,NB15,50,171,Custom,Common Neighbours,0.737857891,0.9218
 09:01,NB15,50,171,Custom,Jaccard Coefficient,0.68688258,1.5338
-09:01,NB15,50,171,Custom,Preferential Attachment,0.758359938,0.6249
-09:01,NB15,50,171,Custom,No LP,0.737843315,0.125
+09:01,NB15,50,171,Custom,Preferential Attachment,0.853627257,0.9047
+09:01,NB15,50,171,Custom,No LP,0.837520916,0.1885
 08:02,NB15,50,171,Custom,Common Neighbours,0.738904986,1.7654
 08:02,NB15,50,171,Custom,Jaccard Coefficient,0.715878917,3.0309
-08:02,NB15,50,171,Custom,Preferential Attachment,0.756180202,1.2655
-08:02,NB15,50,171,Custom,No LP,0.738893141,0.2656
+08:02,NB15,50,171,Custom,Preferential Attachment,0.853436049,1.6448
+08:02,NB15,50,171,Custom,No LP,0.84081303,0.374
 07:03,NB15,50,170,Custom,Common Neighbours,0.742690245,2.6716
 07:03,NB15,50,170,Custom,Jaccard Coefficient,0.700495372,4.5705
-07:03,NB15,50,170,Custom,Preferential Attachment,0.761254748,1.8904
-07:03,NB15,50,170,Custom,No LP,0.7426802,0.4062
+07:03,NB15,50,170,Custom,Preferential Attachment,0.860556447,2.3402
+07:03,NB15,50,170,Custom,No LP,0.847450911,0.5304
 06:04,NB15,50,169,Custom,Common Neighbours,0.730314258,3.5621
 06:04,NB15,50,169,Custom,Jaccard Coefficient,0.720416012,6.0616
-06:04,NB15,50,169,Custom,Preferential Attachment,0.74627473,2.5522
-06:04,NB15,50,169,Custom,No LP,0.730305307,0.5312
+06:04,NB15,50,169,Custom,Preferential Attachment,0.86023749,3.2004
+06:04,NB15,50,169,Custom,No LP,0.849131535,0.7166
 05:05,NB15,50,166,Custom,Common Neighbours,0.719465202,4.3274
 05:05,NB15,50,166,Custom,Jaccard Coefficient,0.741925413,7.6707
-05:05,NB15,50,166,Custom,Preferential Attachment,0.733150242,3.1245
-05:05,NB15,50,166,Custom,No LP,0.719456834,0.6874
+05:05,NB15,50,166,Custom,Preferential Attachment,0.852163028,4.44
+05:05,NB15,50,166,Custom,No LP,0.843431525,0.9334
 04:06,NB15,46,157,Custom,Common Neighbours,0.737942416,5.2961
 04:06,NB15,46,157,Custom,Jaccard Coefficient,0.741747061,9.358
-04:06,NB15,46,157,Custom,Preferential Attachment,0.756554669,3.7963
-04:06,NB15,46,157,Custom,No LP,0.737934181,0.828
+04:06,NB15,46,157,Custom,Preferential Attachment,0.8710734,5.175
+04:06,NB15,46,157,Custom,No LP,0.86030299,1.2241
 03:07,NB15,46,157,Custom,Common Neighbours,0.753407786,6.1866
 03:07,NB15,46,157,Custom,Jaccard Coefficient,0.757840346,10.7796
-03:07,NB15,46,157,Custom,Preferential Attachment,0.773590601,4.4423
-03:07,NB15,46,157,Custom,No LP,0.753396664,1.0102
+03:07,NB15,46,157,Custom,Preferential Attachment,0.885515651,6.0104
+03:07,NB15,46,157,Custom,No LP,0.873874592,1.3058
 02:08,NB15,46,157,Custom,Common Neighbours,0.766552587,7.0864
 02:08,NB15,46,157,Custom,Jaccard Coefficient,0.771374332,12.8925
-02:08,NB15,46,157,Custom,Preferential Attachment,0.787190481,5.1555
-02:08,NB15,46,157,Custom,No LP,0.766539199,1.1405
+02:08,NB15,46,157,Custom,Preferential Attachment,0.896674725,6.8498
+02:08,NB15,46,157,Custom,No LP,0.884605982,1.5177
 01:09,NB15,44,155,Custom,Common Neighbours,0.768149001,7.8894
 01:09,NB15,44,155,Custom,Jaccard Coefficient,0.773875438,13.8412
-01:09,NB15,44,155,Custom,Preferential Attachment,0.790114565,5.7335
-01:09,NB15,44,155,Custom,No LP,0.768132181,1.2808
+01:09,NB15,44,155,Custom,Preferential Attachment,0.902254657,7.84
+01:09,NB15,44,155,Custom,No LP,0.888709637,1.7435
+00:10,NB15,-1,-1,Custom,No LP,0.884013181,254.7244473
 09:01,CTU13,52262,39583,No sketch,Common Neighbours,0.4965,-1
 09:01,CTU13,52262,39583,No sketch,Jaccard Coefficient,0.4965,-1
 09:01,CTU13,339647,396994,No sketch,Preferential Attachment,0.793038806,0.7342
@@ -440,7 +440,6 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,CTU13,187901,36273,No sketch,Common Neighbours,0.4969,-1
 01:09,CTU13,187901,36273,No sketch,Jaccard Coefficient,0.4969,-1
 01:09,CTU13,69721,76624,No sketch,Preferential Attachment,0.771127448,5.3475
-10:00,CTU13,-1,-1,MIDAS,No LP,0.906902254,6.041
 09:01,CTU13,339647,396994,MIDAS,Common Neighbours,0.7523,976.5164
 09:01,CTU13,339647,396994,MIDAS,Jaccard Coefficient,0.5864,2451.5768
 09:01,CTU13,339647,396994,MIDAS,Preferential Attachment,0.8509,0.9212
@@ -461,11 +460,10 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 02:08,CTU13,114251,126422,MIDAS,No LP,0.907495865,1.4215
 01:09,CTU13,69721,76624,MIDAS,Preferential Attachment,0.9386,5.2936
 01:09,CTU13,69721,76624,MIDAS,No LP,0.905403362,1.5777
-10:00,CTU13,-1,-1,MIDAS-R,No LP,0.970365632,5.1394
+00:10,CTU13,-1,-1,MIDAS,No LP,0.906902254,6.041
 09:01,CTU13,339647,396994,MIDAS-R,Common Neighbours,0.956598684,1105.377
 09:01,CTU13,339647,396994,MIDAS-R,Jaccard Coefficient,0.833772138,2521.2678
 09:01,CTU13,339647,396994,MIDAS-R,Preferential Attachment,0.893,0.8414
-09:01,CTU13,339647,396994,MIDAS-R,Preferential Attachment,0.939740362,0.578
 09:01,CTU13,339647,396994,MIDAS-R,No LP,0.950542104,0.1718
 08:02,CTU13,309938,356522,MIDAS-R,Preferential Attachment,0.9062,1.3267
 08:02,CTU13,309938,356522,MIDAS-R,No LP,0.946483199,0.3124
@@ -483,7 +481,9 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 02:08,CTU13,114251,126422,MIDAS-R,No LP,0.971580968,1.3747
 01:09,CTU13,69721,76624,MIDAS-R,Preferential Attachment,0.9558,6.5002
 01:09,CTU13,69721,76624,MIDAS-R,No LP,0.969356377,1.5934
-10:00,CTU13,-1,-1,Custom,No LP,0.913014943,-1
+00:10,CTU13,-1,-1,MIDAS-R,No LP,0.970365632,5.1394
+09:01,CTU13,339647,396994,Custom,Common Neighbours,0.850837707,973.155
+09:01,CTU13,339647,396994,Custom,Jaccard Coefficient,0.71259731,2485.4154
 09:01,CTU13,339647,396994,Custom,Preferential Attachment,0.913499548,0.8822
 09:01,CTU13,339647,396994,Custom,No LP,0.877096621,0.2146
 08:02,CTU13,309938,356522,Custom,Preferential Attachment,0.917191143,1.6502
@@ -502,6 +502,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 02:08,CTU13,114251,126422,Custom,No LP,0.915143638,1.4483
 01:09,CTU13,69721,76624,Custom,Preferential Attachment,0.970225902,5.9149
 01:09,CTU13,69721,76624,Custom,No LP,0.912592119,1.6635
+00:10,CTU13,-1,-1,Custom,No LP,0.913014943,-1
 09:01,Gowalla,1607,5958,No sketch,Common Neighbours,0.46232196,2.7786
 09:01,Gowalla,1607,5958,No sketch,Jaccard Coefficient,0.577522019,5.3578
 09:01,Gowalla,1607,5958,No sketch,Preferential Attachment,0.796032578,0.5448
@@ -529,7 +530,6 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,Gowalla,657,1485,No sketch,Common Neighbours,0.506963897,4.0303
 01:09,Gowalla,657,1485,No sketch,Jaccard Coefficient,0.480319276,6.0142
 01:09,Gowalla,657,1485,No sketch,Preferential Attachment,0.617731111,2.9368
-10:00,Gowalla,-1,-1,MIDAS,No LP,0.672404977,7.754
 09:01,Gowalla,1607,5958,MIDAS,Common Neighbours,0.521737575,2.8431
 09:01,Gowalla,1607,5958,MIDAS,Jaccard Coefficient,0.536615868,7.896
 09:01,Gowalla,1607,5958,MIDAS,Preferential Attachment,0.712029085,0.4843
@@ -566,7 +566,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,Gowalla,657,1485,MIDAS,Jaccard Coefficient,0.57342767,6.5922
 01:09,Gowalla,657,1485,MIDAS,Preferential Attachment,0.639179512,2.9368
 01:09,Gowalla,657,1485,MIDAS,No LP,0.586298781,0.8149
-10:00,Gowalla,-1,-1,MIDAS-R,No LP,0.694932496,7.4514
+00:10,Gowalla,-1,-1,MIDAS,No LP,0.672404977,7.754
 09:01,Gowalla,1607,5958,MIDAS-R,Common Neighbours,0.43406045,2.2675
 09:01,Gowalla,1607,5958,MIDAS-R,Jaccard Coefficient,0.492962251,4.6847
 09:01,Gowalla,1607,5958,MIDAS-R,Preferential Attachment,0.743093791,0.4843
@@ -603,7 +603,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,Gowalla,657,1485,MIDAS-R,Jaccard Coefficient,0.673793772,6.4325
 01:09,Gowalla,657,1485,MIDAS-R,Preferential Attachment,0.70718269,2.8885
 01:09,Gowalla,657,1485,MIDAS-R,No LP,0.689621493,0.6561
-10:00,Gowalla,-1,-1,Custom,No LP,0.759051011,154.9595683
+00:10,Gowalla,-1,-1,MIDAS-R,No LP,0.694932496,7.4514
 09:01,Gowalla,1607,5958,Custom,Common Neighbours,0.575879904,2.1847
 09:01,Gowalla,1607,5958,Custom,Jaccard Coefficient,0.583948134,4.4646
 09:01,Gowalla,1607,5958,Custom,Preferential Attachment,0.746128019,0.4698
@@ -640,6 +640,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,Gowalla,657,1485,Custom,Jaccard Coefficient,0.679247951,6.3472
 01:09,Gowalla,657,1485,Custom,Preferential Attachment,0.722026585,2.8922
 01:09,Gowalla,657,1485,Custom,No LP,0.69133485,0.75
+00:10,Gowalla,-1,-1,Custom,No LP,0.759051011,154.9595683
 09:01,NYC_Taxi,264,14832,No sketch,Common Neighbours,0.979599953,26.3416
 09:01,NYC_Taxi,264,14832,No sketch,Jaccard Coefficient,0.974466882,39.061
 09:01,NYC_Taxi,264,14832,No sketch,Preferential Attachment,0.97404964,1.5757
@@ -667,7 +668,6 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,NYC_Taxi,261,9267,No sketch,Common Neighbours,0.977166791,122.4698
 01:09,NYC_Taxi,261,9267,No sketch,Jaccard Coefficient,0.912170037,225.0711
 01:09,NYC_Taxi,261,9267,No sketch,Preferential Attachment,0.971040058,11.4386
-10:00,NYC_Taxi,-1,-1,MIDAS,No LP,0.605035845,18.1725
 09:01,NYC_Taxi,264,14832,MIDAS,Common Neighbours,0.837524999,17.9226
 09:01,NYC_Taxi,264,14832,MIDAS,Jaccard Coefficient,0.802619512,29.7254
 09:01,NYC_Taxi,264,14832,MIDAS,Preferential Attachment,0.855748875,1.447
@@ -704,7 +704,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,NYC_Taxi,261,9267,MIDAS,Jaccard Coefficient,0.739616367,213.6651
 01:09,NYC_Taxi,261,9267,MIDAS,Preferential Attachment,0.837562977,11.6886
 01:09,NYC_Taxi,261,9267,MIDAS,No LP,0.588416088,2.3511
-10:00,NYC_Taxi,-1,-1,MIDAS-R,No LP,0.752550302,20.846
+00:10,NYC_Taxi,-1,-1,MIDAS,No LP,0.605035845,18.1725
 09:01,NYC_Taxi,264,14832,MIDAS-R,Common Neighbours,0.837333079,17.2038
 09:01,NYC_Taxi,264,14832,MIDAS-R,Jaccard Coefficient,0.802071811,36.4167
 09:01,NYC_Taxi,264,14832,MIDAS-R,Preferential Attachment,0.858075155,1.6639
@@ -741,7 +741,7 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,NYC_Taxi,261,9267,MIDAS-R,Jaccard Coefficient,0.854158239,218.4562
 01:09,NYC_Taxi,261,9267,MIDAS-R,Preferential Attachment,0.90621685,11.397
 01:09,NYC_Taxi,261,9267,MIDAS-R,No LP,0.744844086,2.312
-10:00,NYC_Taxi,-1,-1,Custom,No LP,0.745682245,567.8212588
+00:10,NYC_Taxi,-1,-1,MIDAS-R,No LP,0.752550302,20.846
 09:01,NYC_Taxi,264,14832,Custom,Common Neighbours,0.883896071,20.7868
 09:01,NYC_Taxi,264,14832,Custom,Jaccard Coefficient,0.863407235,36.4834
 09:01,NYC_Taxi,264,14832,Custom,Preferential Attachment,0.894119784,1.7884
@@ -778,3 +778,4 @@ Split (train:test),Dataset,#nodes,#edges,MIDAS,Method,AUC,Time [s]
 01:09,NYC_Taxi,261,9267,Custom,Jaccard Coefficient,0.840755422,212.4214
 01:09,NYC_Taxi,261,9267,Custom,Preferential Attachment,0.895724288,12.3397
 01:09,NYC_Taxi,261,9267,Custom,No LP,0.738784641,2.2788
+00:10,NYC_Taxi,-1,-1,Custom,No LP,0.745682245,567.8212588

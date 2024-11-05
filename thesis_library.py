@@ -6,6 +6,7 @@ import seaborn as sns
 from random import randint, uniform
 from itertools import permutations
 from math import floor, log10
+from matplotlib.colors import LogNorm
 import os
 import pickle
 from tqdm import trange
@@ -159,15 +160,20 @@ def read_data(dataset: str, plant=None, year=2012, month=1, sample=False) -> tup
         return data, label
         
         
-def split(X, y, test_size:float, scores=None) -> tuple:
+def split(X, y, test_size=None, scores=None) -> tuple:
     '''
     DOES split on a precise timestamp
     Does NOT randomize the edges (sorted on timestamp assumption)
     
     If scores is a list, then only return the test part of it'''
     
-    if test_size == 0:
-        return X, y, [], []
+    assert 0 <= test_size <= 1, "Pass test_size in the [0, 1] interval"
+        
+    if test_size == 0.0:
+        return X, [], y, []
+    
+    if test_size == 1.0:
+        return [], X, [], y
     
     cutoff_index = int(len(y) * (1-test_size))
     cutoff_timestamp = X[cutoff_index][2] #I assume the timestamp is at position 2 in the row
@@ -212,11 +218,10 @@ def construct_training_graph(X_train, y_train, normal_allowed: bool, anomalies_a
     return G
     
 
- 
 def create_dataset_info():
-    '''TO DO: test after the changes were made'''
+    '''Final_train_t shows the final t of the entire dataset for the 00:10 split'''
     
-    df = pd.DataFrame(columns=['Split (train:test)', 'Dataset', 'Final_t', \
+    df = pd.DataFrame(columns=['Split (train:test)', 'Dataset', 'Final_train_t', \
                                'Train_size', 'Train_anomaly_size', 'Train_anomaly_percentage', \
                                'Test_size', 'Test_anomaly_size', 'Test_anomaly_percentage'])
     
@@ -224,23 +229,23 @@ def create_dataset_info():
         print("Reading dataset", dataset)
         
         X, y = read_data(dataset, plant='clique')
+
+        df.loc[df.shape[0]] = ['00:10', dataset, X[-1][-1], 0, 0, 0, len(y), sum(y), round(sum(y)/len(y), 5)]
         
-        anomaly_share = round(sum(y)/len(y), 5) if len(y) > 0 else 0
-        df.loc[df.shape[0]] = ['10:00', dataset, X[-1][-1], len(y), sum(y), anomaly_share, 0, 0, 0]
-        
-        for test_size in [round(0.1*(i+1), 2) for i in range(0, 9)]:
-            _, _, y_train, y_test = split(X, y, test_size)
+        for test_size in [round(1 - 0.1*(i+1), 2) for i in range(0, 9)]:
+            X_train, X_test, y_train, y_test = split(X, y, test_size)
             
             split_name = get_split_name(test_size)
             
             train_anomaly_share = round(sum(y_train)/len(y_train), 5) if len(y_train) > 0 else 0
             test_anomaly_share = round(sum(y_test)/len(y_test), 5) if len(y_test) > 0 else 0
     
-            df.loc[df.shape[0]] = [split_name, dataset, X[-1][-1],\
+            df.loc[df.shape[0]] = [split_name, dataset, X_train[-1][-1],\
                                    len(y_train), sum(y_train), train_anomaly_share,\
                                    len(y_test), sum(y_test), test_anomaly_share]
-        
+           
         df.to_csv('./CSV/dataset_info.csv', index=False)
+        
         
         
 def apply_lp(method, score, X_test, G):
@@ -310,7 +315,7 @@ def lp_single_edge(u: int, v: int, G = None, method = 'No LP') -> float:
 
 
 def get_split_name(test_size: float) -> str:
-    assert 0.0 <= test_size <= 1
+    assert 0 <= test_size <= 1
     return str(int(round(((1.0-test_size)*10), 2))) + ':' + str(int(test_size*10))
 
 
@@ -406,7 +411,7 @@ def split_data_reader(dataset: str) -> tuple:
     assert dataset in DATASETS+[None], "Dataset not found. Use one of DATASETS or None. Got " + dataset
     
     regular = pd.read_csv('./CSV/test_on_splits.csv')
-    statistics = pd.read_csv('./CSV/dataset_info.csv', header=0)
+    statistics = pd.read_csv('./CSV/dataset_info.csv', converters={'Split (train:test)': str}, header=0)
     
     if dataset is not None:
         regular = regular[regular["Dataset"] == dataset].reset_index(drop=True)
@@ -446,14 +451,14 @@ def plot_hash_table(matrix, dataset: str, alg_name: str, depth: int, length: int
         
         #Setting up the title and filename:
         title = 'MIDAS - hash table at dataset ' + dataset
-        filename = 'MIDAS(' + str(depth) + ", " + str(length) + ")" + '_' + dataset + '_' + str(log) + ".png"
+        filename = 'MIDAS(' + str(depth) + ", " + str(length) + ")" + '_' + dataset + '_' + str(log) + ".pdf"
         
     if alg_name in ['Custom', 'custom', 'Rav', 'rav']:
         
         #Setting up the title and filename:
         title = 'Custom sketch - hash table (' + str(k_index) + ', ' + str(subsketch_index) + ')'
         filename = "Custom(" + str(depth) + ", " + str(length) + ", " + str(k) + ")_new_" + dataset + \
-        ". Subsketch (" + str(k_index) + ", " + str(subsketch_index) + ").png"
+        ". Subsketch (" + str(k_index) + ", " + str(subsketch_index) + ").pdf"
         
     #plotting and display:
     plt.title(title);
@@ -466,8 +471,8 @@ def plot_hash_table(matrix, dataset: str, alg_name: str, depth: int, length: int
         sns.heatmap(matrix, ax=ax)
 
     #Saving the file:
-    if filename not in os.listdir('./Figures/Hashes/'):
-        plt.savefig('./Figures/Hashes/' + filename)
+    if filename not in os.listdir('./Figures - PDF/Hashes/'):
+        plt.savefig('./Figures - PDF/Hashes/' + filename, bbox_inches='tight')
     plt.show();
     
     
@@ -563,3 +568,6 @@ def get_nice_timestamp_indices(dataset: str, timestamp=None, number_of_edges=100
                         if iters > 1000:
                             #print(start, end, sum(y[start:end]))
                             raise ValueError("oops, did not found any good slice")
+                            
+                            
+#end

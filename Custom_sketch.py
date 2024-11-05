@@ -44,7 +44,7 @@ class Sketch:
     def copy(self):
         '''Creates a copy of the current Sketch'''
         
-        s = Sketch(length=self.length, hash_parameters=self.hash_parameters)
+        s = Sketch(length=self.length, offset=self.offset)
         s.table = self.table
         return s
     
@@ -370,3 +370,4 @@ class MIDAS():
                         subsketch_index = subsketch_index,
                         log = log)
         
+#end
