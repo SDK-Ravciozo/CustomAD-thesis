@@ -141,7 +141,7 @@ class CMSketch():
         '''Tosses a coin. With probability p, the sketch will be active in this given timestamp'''
         
         assert self.timestamps_remaining_active >= 0, \
-        "How the fuck did you get timestamps_remaining_active to" + str(self.timestamps_remaining_active) + "?"
+        "How did you get timestamps_remaining_active to" + str(self.timestamps_remaining_active) + "?"
         
         if self.timestamps_remaining_active == 0:
             if uniform(0, 1) < self.p:

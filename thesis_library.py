@@ -430,8 +430,10 @@ def read_score(alg: str, dataset: str):
         filename = alg + "_3-32-5_No LP_" + dataset + '.txt'
     elif alg == 'midas':
         filename = alg + "_" + dataset + '.txt'
+    elif alg == 'perfect':
+        filename = alg + "_" + dataset + ".txt"
     else:
-        raise ValueError("pass alg = 'custom' or 'midas', got" + alg)
+        raise ValueError("pass alg = 'custom' or 'midas' or 'perfect', got" + alg)
     
     with open('./data/scores/' + filename, 'rb') as fp:
         return pickle.load(fp)
